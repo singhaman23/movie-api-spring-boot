@@ -1,8 +1,8 @@
 # Build stage
-FROM eclipse-temurin:11-jdk AS build
+FROM maven:3.9.6-eclipse-temurin-11 AS build
 WORKDIR /app
 COPY . .
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Runtime stage
 FROM eclipse-temurin:11-jre
