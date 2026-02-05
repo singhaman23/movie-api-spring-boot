@@ -1,0 +1,1 @@
+web: java -jar target/movie-api-1.0.0.jar
